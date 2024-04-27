@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // fetch("person.json")
+        //     .then(Response => Response.json())
+        //     .then(valuess => console.log(valuess[0].name));
+
+        fetch("person.json")
+            .then(Response => Response.json())
+            .then(values => values.forEach(value => console.log(values.name)))
+            .catch(error => console.error(error));
+    </script>
+</body>
+
+</html>
